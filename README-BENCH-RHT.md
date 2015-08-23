@@ -6,13 +6,17 @@ Read-Log-Update: A Lightweight Synchronization Mechanism for Concurrent Programm
 Authors
 -------
 Alexander Matveev (MIT)
+
 Nir Shavit (MIT and Tel-Aviv University)
+
 Pascal Felber (University of Neuchatel)
+
 Patrick Marlier (University of Neuchatel)
 
 Code Maintainer
 -----------------
 Name:  Alexander Matveev
+
 Email: amatveev@csail.mit.edu
 
 RLU-RHT Benchmark
@@ -28,6 +32,7 @@ Our RLU-RHT (resizable hash-table) benchmark provides:
 In this benchmark we use:
 
 (1) RLU coarse-grained
+
 (2) Userspace RCU library of Arbel and Morrison (http://dl.acm.org/citation.cfm?id=2611471)
 
 Compilation
@@ -38,26 +43,36 @@ Execution Options
 -----------------
   -h, --help
         Print this message
+
   -a, --do-not-alternate
 	    Do not alternate insertions and removals
+
   -w, --rlu-max-ws
 	    Maximum number of write-sets aggregated in RLU deferral.
 	    In this benchmark, it must be 1 (RLU coarse-grained).
+
   -g, --resize-rate
         If 1 then the first thread is dedicated to resizes (constant expand-shrink)
         Else, must be set to 0 (no resizes)
+
   -b, --buckets
         Number of buckets (for list use 1, default=(1))
+
   -d, --duration <int>
         Test duration in milliseconds (0=infinite, default=(10000))
+
   -i, --initial-size <int>
         Number of elements to insert before test (default=(256))
+
   -r, --range <int>
         Range of integer values inserted in set (default=((256) * 2))
+
   -s, --seed <int>
         RNG seed (0=time-based, default=(0))
+
   -u, --update-rate <int>
         Percentage of update transactions: 0-1000 (100%) (default=(200))
+
   -n, --num-threads <int>
 	    Number of threads (default=(1))
 
