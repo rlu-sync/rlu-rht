@@ -23,10 +23,12 @@ RLU-RHT Benchmark
 Our RLU-RHT (resizable hash-table) benchmark provides:
 
 (1) RCU resizable hash table of Triplett et al. (http://dl.acm.org/citation.cfm?id=2002192)
-    * no support for concurrent inserts/removes
+    
+	- no support for concurrent inserts/removes
 
 (2) RLU resizable hash table
-    * Full support for concurrent inserts/removes
+    
+	- Full support for concurrent inserts/removes
 
 In this benchmark we use:
 
