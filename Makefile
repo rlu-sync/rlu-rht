@@ -25,9 +25,6 @@ all: $(BINS)
 atomics.o: atomics.c
 	$(CC) $(CFLAGS) $(DEFINES) -c -o $@ $<
 
-htm.o: htm.c
-	$(CC) $(CFLAGS) $(DEFINES) -c -o $@ $<
-
 rlu.o: rlu.c
 
 new-urcu.o: new-urcu.c
@@ -42,10 +39,10 @@ bench-rcu.o: bench.c
 bench-rlu.o: bench.c
 	$(CC) $(CFLAGS) $(IS_RLU) $(DEFINES) -c -o $@ $<
 
-bench-rcu: atomics.o htm.o new-urcu.o rlu.o hash-list-resize.o bench-rcu.o
+bench-rcu: atomics.o new-urcu.o rlu.o hash-list-resize.o bench-rcu.o
 	$(LD) -o $@ $^ $(LDFLAGS)
 
-bench-rlu: atomics.o htm.o new-urcu.o rlu.o hash-list-resize.o bench-rlu.o
+bench-rlu: atomics.o new-urcu.o rlu.o hash-list-resize.o bench-rlu.o
 	$(LD) -o $@ $^ $(LDFLAGS)
 
 clean:

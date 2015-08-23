@@ -256,8 +256,6 @@ static void *test(void *data)
 		/* Populate set */
 		printf("[%ld] Initializing\n", d->uniq_id);
 		printf("[%ld] Adding %d entries to set\n", d->uniq_id, d->initial);
-		//d->p_rlu_td->is_no_htm = 1;
-		//d->p_rlu_td->is_no_quiescence = 1;
 		int i = 0;
 		while (i < d->initial) {
 			key = rand_range(d->range, d->seed) + 1;
@@ -290,8 +288,6 @@ static void *test(void *data)
 		printf("DONE DONE\n");
 		exit(1);
 */
-		//d->p_rlu_td->is_no_htm = 0;
-		//d->p_rlu_td->is_no_quiescence = 0;
 	}
 	
 	/* Wait on barrier */
